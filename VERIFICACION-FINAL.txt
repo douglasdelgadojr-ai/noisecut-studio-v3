@@ -1,0 +1,15 @@
+VERIFICACIÓN FINAL — NoiseCut Studio v3
+
+Probado:
+- `python -m py_compile noisecut.py test_engine.py`: terminó sin errores.
+- `python test_engine.py`: pasaron las comprobaciones estáticas de filtros, formatos, transiciones, subtítulos, duración y vista previa. El propio test informó que omitió las exportaciones reales porque FFmpeg no está instalado.
+- Interfaz: se pudo crear la ventana principal en modo sin pantalla; se comprobó el título y la presencia de las tres tarjetas de IA. Se cerró automáticamente el aviso de FFmpeg.
+- Se comprobó que `LEEME.md` contiene 13 líneas y que el workflow declara los pasos de prueba, empaquetado y artefacto.
+
+No pude verificar:
+- Exportar audio o video y medir con FFmpeg la reducción de ruido sintético. La prueba de integración quedó escrita en `test_engine.py`, pero FFmpeg no está disponible en este equipo.
+- El uso interactivo completo de la interfaz, la reproducción y el renderizado de vista previa de principio a fin.
+- Descargar y ejecutar Whisper, quitar fondo o RNNoise; tampoco la descarga del modelo RNNoise.
+- Ejecutar GitHub Actions o generar y abrir el `.exe` de Windows.
+
+El ZIP contiene el código fuente y la configuración para que GitHub Actions ejecute las pruebas con la build completa de FFmpeg de BtbN. No contiene un `.exe` ya compilado.
